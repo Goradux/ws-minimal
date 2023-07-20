@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <h1>Open the console!</h1>
+
+    <script>
+      const PORT = 8080;
+      let ws = new WebSocket(`ws://localhost:${PORT}`);
+
+      ws.onopen = function () {
+        console.log(`Opened a new WebSocket connection!`);
+        const data = "Hello, WebSocket!"
+        ws.send(data);
+      };
+
+      ws.onmessage = function (message) {
+        console.log(`received: ${message.data}`);
+      };
+    </script>
+  </body>
+</html>
