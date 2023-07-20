@@ -1,0 +1,19 @@
+{
+  "name": "ws-minimal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc ./index.ts --outDir build",
+    "start": "node ./build/index.js",
+    "start:dev": "npm run build && npm run start",
+    "deploy:remote": "koyeb service redeploy service/name"
+  },
+  "dependencies": {
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.4",
+    "ts-node": "10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
