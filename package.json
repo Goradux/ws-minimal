@@ -5,8 +5,7 @@
   "scripts": {
     "build": "tsc ./index.ts --outDir build",
     "start": "node ./build/index.js",
-    "start:dev": "npm run build && npm run start",
-    "deploy:remote": "koyeb service redeploy service/name"
+    "start:dev": "npm run build && npm run start"
   },
   "dependencies": {
     "ws": "^8.13.0"
